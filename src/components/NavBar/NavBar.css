@@ -1,54 +1,19 @@
-/* Estilos del navbar */
+/* NavBar.css */
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 1rem 2rem;
-    color: white;
+    padding: 10px;
+    background-color: #b7c87a; /* Fondo de la barra de navegación */
+    border-bottom: 1px solid #ddd; /* Línea inferior */
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Tamaño de la fuente de la marca */
     font-weight: bold;
+    margin-right: auto; /* Empuja el menú y el carrito hacia la derecha */
+    color: #49492a
 }
 
-.navbar-buttons {
-    display: flex;
-    gap: 1rem;
-}
-
-.nav-button {
-    background-color: #555;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 1rem;
-    border-radius: 5px;
-}
-
-.nav-button:hover {
-    background-color: #777;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar-buttons {
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-    }
-
-    .nav-button {
-        width: 100%;
-        text-align: left;
-        margin: 0.5rem 0;
-    }
+.menu-button {
+    margin-right: 20px; /* Espacio entre el botón del menú y el carrito */
 }

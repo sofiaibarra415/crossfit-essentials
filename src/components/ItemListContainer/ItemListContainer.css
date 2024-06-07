@@ -1,10 +1,10 @@
-/* Estilos del ItemListContainer */
+/* ItemListContainer.css */
 .item-list-container {
-    padding: 2rem;
+    padding: 20px;
     text-align: center;
 }
 
 .item-list-container h1 {
-    font-size: 2rem;
-    color: #333;
+    font-size: 2rem; /* Tamaño de la fuente */
+    color: #333; /* Color de la fuente */
 }

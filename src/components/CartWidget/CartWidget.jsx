@@ -1,10 +1,10 @@
-import cart from './assets/carrito-de-compras.png'
 import './CartWidget.css'; 
+import { IoCartOutline } from "react-icons/io5";
 
 const CartWidget = () => {
     return (
         <div className="cart-widget">
-            <img src={cart} alt="carrito" className="cart-image" />
+            <IoCartOutline size={34} />
             <span className="cart-count">0</span>
         </div>
     )
