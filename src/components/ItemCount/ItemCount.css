@@ -1,0 +1,26 @@
+.button {
+    background-color: #3d4c6e; /* Color de fondo */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 5px 15px; /* Relleno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Display en línea */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 2px 1px; /* Márgenes */
+    cursor: pointer; /* Cursor de mano */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave */
+    border-top: 40px;
+  }
+  
+  .button:hover {
+    background-color: #131E38; /* Color de fondo al pasar el ratón */
+  }
+  
+  .count {
+    font-size: 20px; /* Tamaño de la fuente */
+    margin: 0 15px; /* Márgenes */
+  }
+
+  

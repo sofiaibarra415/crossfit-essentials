@@ -1,19 +1,70 @@
-/* NavBar.css */
+body {
+  padding-top: 60px;
+  margin: 0;
+}
+
 .navbar {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #b7c87a; /* Fondo de la barra de navegación */
-    border-bottom: 1px solid #ddd; /* Línea inferior */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #30546E;
+  z-index: 1000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
-    font-size: 1.5rem; /* Tamaño de la fuente de la marca */
-    font-weight: bold;
-    margin-right: auto; /* Empuja el menú y el carrito hacia la derecha */
-    color: #49492a
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 .menu-button {
-    margin-right: 20px; /* Espacio entre el botón del menú y el carrito */
+  color: #fff;
+  font-size: 1.5rem;
+  display: none;
+  cursor: pointer;
 }
+
+.menu {
+  display: flex;
+}
+
+.menu-item {
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #30546E;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+
+  .menu-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+}
+

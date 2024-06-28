@@ -8,6 +8,8 @@
 
 .cart-icon {
     font-size: 2rem; /* Agranda el icono */
-    color: #333; /* Cambia el color del icono si lo deseas */
+    color: white;
 }
-
+.cart-count{
+    color: #fff;
+}

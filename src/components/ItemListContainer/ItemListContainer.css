@@ -2,9 +2,13 @@
 .item-list-container {
     padding: 20px;
     text-align: center;
+    background-color:#131E38 ;
 }
 
 .item-list-container h1 {
     font-size: 2rem; /* Tamaño de la fuente */
-    color: #333; /* Color de la fuente */
+    color: #FFF; /* Color de la fuente */
+}
+.font{
+font-family:'Noto Serif';
 }
