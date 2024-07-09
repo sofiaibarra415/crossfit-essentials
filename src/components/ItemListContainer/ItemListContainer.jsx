@@ -10,7 +10,6 @@ const ItemListContainer = ({ greeting }) => {
     const [productos, setProductos] = useState([])
     const { categoryId} = useParams()
     const [loading, setLoading] = useState(true)
-    console.log(categoryId)
     useEffect(() => {
         setLoading(true)
     const dataProducts= categoryId? getProductsByCategory(categoryId) : getProducts()
@@ -19,8 +18,6 @@ const ItemListContainer = ({ greeting }) => {
         .catch((error) => console.log(error))
         .finally(() => setLoading(false))
     }, [categoryId])
-
-    console.log(productos)
     return (
         <div className="item-list-container">
             <h1 className='font'>{greeting}</h1>
