@@ -13,7 +13,8 @@ import {
     Flex,
     Heading,
     Text,
-    Link as ChakraLink
+    Link as ChakraLink,
+    Center
 } from '@chakra-ui/react'
 import Context from '../../context/CartContext'
 import { Link } from 'react-router-dom'
@@ -31,37 +32,37 @@ if (cart.length === 0){
     )
 }else{
     return (
-        <TableContainer>
-            <Table variant='striped' colorScheme='teal'>
+        <TableContainer m={6} > 
+            <Table variant='striped' mt={10} colorScheme='gray' width={1000}  align={'center'} justify={'center'}>
                 <Thead>
                     <Tr>
-                        <Th>Producto</Th>
-                        <Th>Cantidad</Th>
-                        <Th>Precio</Th>
-                        <Th>Subtotal</Th>
+                        <Th fontSize='20px'>Producto</Th>
+                        <Th fontSize='20px'>Cantidad</Th>
+                        <Th fontSize='20px'>Precio</Th>
+                        <Th fontSize='20px'>Subtotal</Th>
                         <Th></Th>
                     </Tr>
                 </Thead>
                 <Tbody>
                     {
                         cart.map((prod) => (
-                            <Tr key={prod.id}>
+                            <Tr key={prod.id} bg='##CACAAA'>
                                 <Td>{prod.nombre }</Td>
                                 <Td>{prod.quantity }</Td>
                                 <Td>{prod.precio}</Td>
                                 <Td>{prod.precio * prod.quantity }</Td>
                                 <Td>{
-                                    <Button onClick={()=> removeItem(prod.id)} background={'transparent'}><RiDeleteBin5Fill /></Button>
+                                    <Button onClick={()=> removeItem(prod.id)} fontSize='20px' background={'transparent'}><RiDeleteBin5Fill /></Button>
                                  }</Td>
                             </Tr>
                         ))
                     }
                 </Tbody>
             </Table>
-            <Flex>
-                <Heading>Total: {getTotalPrice()}</Heading>
-                <Button onClick={() => clearCart()}>Vaciar el carrito <TiDelete /></Button>
-                <Heading>Finalizar compra</Heading>
+            <Flex  m={10} align={'center'} justify={'center'}>
+                <Heading color='#55868C' >Total: {getTotalPrice()}</Heading>
+                <Button m={10} bg='#55868C' height='50px' width='200px' onClick={() => clearCart()}>Vaciar el carrito <TiDelete size={30}/></Button>
+                <Button m={10} bg='#55868C' height='50px' width='200px'><Link to={'/checkout'}> Finalizar compra </Link></Button>
             </Flex>
         </TableContainer>
     )

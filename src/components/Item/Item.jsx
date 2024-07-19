@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 const Item = ({ nombre, id, img, precio, stock,  }) => {
     const formattedPrice = precio.toLocaleString('es-ES');
     return (
-        <Card maxW='sm' bg='#fff' margin='5px'>
+        <Card maxW='sm' bg='#CACAAA' margin='5px'>
             <CardBody>
                 <Image
                     src={img}
@@ -27,9 +27,6 @@ const Item = ({ nombre, id, img, precio, stock,  }) => {
             <Divider />
             <CardFooter>
                 <ButtonGroup spacing='2'>
-                    <Button variant='solid' bg='#5591A0' color='131E38' _hover={{ bg: '#131E38;', color: '#FFFFFF' }}>
-                        <Link to={`/producto/${id}`}>Ver Detalle</Link>
-                    </Button>
                     <ItemCount initialValue={1} stock={stock}></ItemCount>
                 </ButtonGroup>
             </CardFooter>

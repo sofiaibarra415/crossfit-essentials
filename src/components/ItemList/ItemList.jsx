@@ -5,9 +5,9 @@ import './ItemList.css'; // Asegúrate de importar los estilos
 
 const ItemList = ({ productos }) => {
     return (
-        <div className="item-list">
+        <div  className="item-list">
             {productos.map((producto) => (
-                <Card key={producto.id} maxW='sm' bg='#fff' margin='5px'>
+                <Card key={producto.id} maxW='sm' bg='#CACAAA' margin='5px'>
                     <CardBody>
                         <Image
                             src={producto.img}
@@ -26,7 +26,7 @@ const ItemList = ({ productos }) => {
                     </CardBody>
                     <Divider />
                     <CardFooter>
-                        <Button as={Link} to={`/producto/${producto.id}`} colorScheme='teal'>
+                        <Button as={Link} to={`/producto/${producto.id}`} background='#30546E' color='#fff' _hover={{ bg: '#708B9F;', color: '#fff' }}>
                             Ver Detalle
                         </Button>
                     </CardFooter>

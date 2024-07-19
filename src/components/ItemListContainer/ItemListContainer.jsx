@@ -5,6 +5,8 @@ import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import {ClipLoader} from 'react-spinners'
 import { Flex } from '@chakra-ui/react';
+import { db } from '../../config/firebase';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 const ItemListContainer = ({ greeting }) => {
     const [productos, setProductos] = useState([])
@@ -12,11 +14,24 @@ const ItemListContainer = ({ greeting }) => {
     const [loading, setLoading] = useState(true)
     useEffect(() => {
         setLoading(true)
-    const dataProducts= categoryId? getProductsByCategory(categoryId) : getProducts()
-    dataProducts
-        .then((prod) => setProductos(prod))
-        .catch((error) => console.log(error))
-        .finally(() => setLoading(false))
+        const getData = async () => {
+            const colleccion = collection(db, 'productos')
+
+            const queryRef = !categoryId ?
+            colleccion : query(colleccion, where('categoria' , '==' , categoryId))
+
+            const response = await getDocs(queryRef)
+            const products = response.docs.map((doc) => {
+                const newItem = {
+                    ...doc.data(),
+                    id: doc.id
+                }
+                return newItem
+            })
+            setProductos(products)
+            setLoading(false)
+        }
+        getData()
     }, [categoryId])
     return (
         <div className="item-list-container">
@@ -24,7 +39,7 @@ const ItemListContainer = ({ greeting }) => {
             {
                 loading ?
                 <Flex justify={'center'} align={'center'} h={'50vh'}>
-                <ClipLoader color='#fff' />  
+                <ClipLoader color='#30546E' />  
                 </Flex>
             :
             <ItemList productos= {productos} />

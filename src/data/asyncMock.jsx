@@ -10,84 +10,75 @@ import rodillerasAzules from '../assets/rodillerasazules.jpg'
 
 export const productos = [
     {
-        id: 1,
         nombre: 'Calleras Tradicionales',
         precio: 25000,
         categoria: 'Calleras',
         stock: 5,
-        descripcion: 'Camiseta de algodón de alta calidad',
+        descripcion: 'Protegen manos en CrossFit, ofrecen agarre seguro, previenen callos y ampollas, mejoran rendimiento y seguridad.',
         img: callerasTradicionales
     },
     {
-        id: 2,
         nombre: 'Rodilleras Negras',
         precio: 60000,
         categoria: 'Rodilleras',
         stock: 50,
-        descripcion: 'Pantalones de mezclilla duraderos',
+        descripcion: 'Brindan soporte y protección óptima para sentadillas, fabricadas en neopreno de alta calidad. Las rodilleras negras ofrecen ajuste cómodo, durabilidad y flexibilidad, ideales para entrenamientos intensivos y prevención de lesiones.',
         img: rodillerasImg
     },
     {
-        id: 3,
         nombre: 'Muñequeras',
         precio: 15000,
         categoria: 'Muñequeras',
         stock: 200,
-        descripcion: 'Zapatillas deportivas cómodas',
+        descripcion: 'Ofrecen soporte y estabilidad en ejercicios de CrossFit. Las muñequeras de alta resistencia, fabricadas en materiales duraderos, proporcionan ajuste seguro y cómodo, reduciendo el riesgo de lesiones y mejorando el rendimiento durante entrenamientos intensivos.',
         img: muñequerasImg
     },
     {
-        id: 4,
         nombre: 'NANO X3 blancas',
         precio: 150000,
         categoria: 'Zapatillas',
         stock: 30,
-        descripcion: 'Chaqueta impermeable con capucha',
+        descripcion: 'Las Nano X3 ofrecen un rendimiento excepcional para entrenamientos intensivos. Con diseño ergonómico y materiales de alta calidad, estas zapatillas proporcionan soporte, durabilidad y comodidad, optimizando tu desempeño en cada ejercicio.',
         img: nanox3rojas
     },
     {
-        id: 5,
         nombre: 'NANO X3 negras',
         precio: 150000,
         categoria: 'Zapatillas',
         stock: 75,
-        descripcion: 'Bolso de cuero genuino',
+        descripcion: 'Las Nano X3 ofrecen un rendimiento excepcional para entrenamientos intensivos. Con diseño ergonómico y materiales de alta calidad, estas zapatillas proporcionan soporte, durabilidad y comodidad, optimizando tu desempeño en cada ejercicio.',
         img: nanox3negras
     },
     {
-        id: 6,
         nombre: 'Rodilleras Azules',
         precio: 65000,
         categoria: 'Rodilleras',
         stock: 75,
-        descripcion: 'Bolso de cuero genuino',
+        descripcion: 'Brindan soporte y protección óptima para sentadillas, fabricadas en neopreno de alta calidad. Las rodilleras azules ofrecen ajuste cómodo, durabilidad y flexibilidad, ideales para entrenamientos intensivos y prevención de lesiones.',
         img: rodillerasAzules
     },
     {
-        id: 7,
         nombre: 'Muñequeras para sudor',
         precio: 20000,
         categoria: 'Muñequeras',
         stock: 75,
-        descripcion: 'Bolso de cuero genuino',
+        descripcion: 'Absorben el sudor eficazmente durante entrenamientos intensivos. Las muñequeras están hechas de materiales suaves y transpirables, ofreciendo comodidad y manteniendo tus manos secas. Ideales para deportes y actividades físicas.',
         img: muñequerassudor
     },
     {
-        id: 8,
         nombre: 'NANO X3 beige',
         precio: 200000,
         categoria: 'Zapatillas',
         stock: 75,
-        descripcion: 'Bolso de cuero genuino',
+        descripcion: 'Las Nano X3 ofrecen un rendimiento excepcional para entrenamientos intensivos. Con diseño ergonómico y materiales de alta calidad, estas zapatillas proporcionan soporte, durabilidad y comodidad, optimizando tu desempeño en cada ejercicio.',
         img: nanox3beige
     },
     {
-        id: 9,
         nombre: 'Calleras sin agujeros',
         precio: 25000,
         categoria: 'Calleras',
         stock: 75,
-        descripcion: 'Bolso de cuero genuino',
+        descripcion: 'Proporcionan protección sin comprometer el agarre. Las calleras sin agujeros para CrossFit están diseñadas para evitar desgarros y ampollas, fabricadas con materiales duraderos y flexibles que aseguran comodidad y rendimiento en cada ejercicio.',
         img: callerasSinAgujeros
     }
 ];

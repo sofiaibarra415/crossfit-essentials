@@ -23,51 +23,40 @@ const ItemDetail = ({ nombre, descripcion, img, id, precio, stock }) => {
     }
     const formattedPrice = precio ? precio.toLocaleString('es-ES') : 'N/A';
     return (
-        <Card maxW="2x1"
-            bg="gray.100"
-            mt="170px" /* margen superior */
-            p="20px"
-            borderRadius="lg"
-            boxShadow="lg"
-            border="2px solid" /* borde externo */
-            borderColor="gray.300" /* color del borde */>
-            <CardBody >
-                <Flex direction="column" align="center">
-                    <Image
-                        src={img}
-                        alt={nombre}
-                        w={'300px'}
-                        h={'300px'}
-                        objectFit={'cover'}
-                        borderRadius='lg'
-                    />
-                    <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{nombre}</Heading>
-                        <Text color='#131E38' fontSize='2xl'>
-                            ${formattedPrice}
-                        </Text>
-                        <Text>
-                            Descripcion: {descripcion}
-                        </Text>
-                    </Stack>
-                </Flex>
-            </CardBody>
-            <Divider />
-            <CardFooter>
-                <ButtonGroup spacing='2'>
-                    {
-                        quantity === 0 ?
-                            <ItemCount initialValue={1} stock={stock} onAdd={onAdd}></ItemCount>
-                            :
-                            <>
-                            <ChakraLink as={Link} to='/cart'>Ir al carrito</ChakraLink>
-                            <ChakraLink as={Link} to='/'>Seguir comprando</ChakraLink>
-                            </>
-                }
-                </ButtonGroup>
-            </CardFooter>
-            <ToastContainer />
-        </Card>
+        <Card bg='#CACAAA' w='70%' h='95%' p={4} mt={5} justify='left'>
+      <CardBody>
+        <Flex direction="row" align="flex-start">
+          <Image
+            src={img}
+            alt={nombre}
+            w='400px'
+            h='400px'
+            objectFit='cover'
+            borderRadius='lg'
+            p={2}
+          />
+          <Stack ml={4} spacing={4} flex="1" justify="flex-start">
+            <Heading pt={2} fontSize='35px'>{nombre}</Heading>
+            <Text fontSize='30px'>${formattedPrice}</Text>
+            <Text fontSize="20px">Descripcion: {descripcion}</Text>
+          </Stack>
+        </Flex>
+      </CardBody>
+      <Divider />
+      <CardFooter>
+        <ButtonGroup>
+          {
+            quantity === 0 ?
+              <ItemCount initialValue={1} stock={stock} onAdd={onAdd} /> :
+              <>
+                <ChakraLink background='#30546E' color='#fff' _hover={{ bg: '#708B9F;', color: '#fff' }} borderRadius="md" p={2} as={Link} to='/cart'>Ir al carrito</ChakraLink>
+                <ChakraLink background='#30546E' color='#fff' _hover={{ bg: '#708B9F;', color: '#fff' }} borderRadius="md" p={2} as={Link} to='/'>Seguir comprando</ChakraLink>
+              </>
+          }
+        </ButtonGroup>
+      </CardFooter>
+      <ToastContainer />
+    </Card>
     )
 }
 
