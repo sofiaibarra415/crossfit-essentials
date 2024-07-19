@@ -6,8 +6,8 @@ const ItemCount = ({initialValue, stock, onAdd}) => {
     const [count, setCount] = useState(initialValue)
 
     const increase = () => {
-        count < stock && setCount(count + 1)
-    }
+      stock > count ? setCount(count + 1) : alert("No hay stock");
+    };
     
     const decrease = () => {
        count > initialValue && setCount(count - 1)
@@ -19,7 +19,7 @@ const ItemCount = ({initialValue, stock, onAdd}) => {
     <span className='count'>{count}</span>
     <button className='button' onClick={increase}>+</button>
     
-    <Button onClick={() => typeof onAdd === 'function' && onAdd(count)} 
+    <Button onClick={() => typeof onAdd === 'function' && stock > 0 && onAdd(count)} 
     background='#30546E' 
     color='#fff' 
     _hover={{ bg: '#708B9F;', color: '#fff' }}

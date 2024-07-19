@@ -79,7 +79,7 @@ export const productos = [
         categoria: 'Calleras',
         stock: 75,
         descripcion: 'Proporcionan protección sin comprometer el agarre. Las calleras sin agujeros para CrossFit están diseñadas para evitar desgarros y ampollas, fabricadas con materiales duraderos y flexibles que aseguran comodidad y rendimiento en cada ejercicio.',
-        img: callerasSinAgujeros
+        img: "https://firebasestorage.googleapis.com/v0/b/crossfit-essentials.appspot.com/o/callerassinagujeros.webp?alt=media&token=51641929-92db-45b2-b787-92010aab4a6c"
     }
 ];
 export const getProducts = () => {
