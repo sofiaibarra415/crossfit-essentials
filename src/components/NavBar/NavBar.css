@@ -27,12 +27,12 @@ body {
 .menu-button {
   color: #fff;
   font-size: 1.5rem;
-  display: none;
   cursor: pointer;
 }
 
 .menu {
   display: flex;
+  flex-direction: row;
 }
 
 .menu-item {
@@ -44,27 +44,12 @@ body {
 
 /* Estilos responsive */
 @media (max-width: 768px) {
-  .menu-button {
-    display: block;
-  }
-
   .menu {
     display: none;
-    flex-direction: column;
-    background-color: #30546E;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
   }
 
-  .menu-item {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .menu.show {
-    display: flex;
+  .navbar {
+    justify-content: space-between;
   }
 }
 

@@ -1,6 +1,14 @@
 .item-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Espacio entre las cards */
-    justify-content: center; /* Alineación hacia la derecha */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .item-list {
+        flex-direction: column;
+        align-items: center;
+    }
 }
