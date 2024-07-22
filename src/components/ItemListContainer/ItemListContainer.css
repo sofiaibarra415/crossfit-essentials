@@ -4,19 +4,12 @@
     background-color: #fff;
 }
 
-.item-list-container h1 {
-    font-size: 2rem;
-    color: #30546E;
-}
 
-.font {
-    font-family: 'Noto Serif';
-}
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
+@media (max-width: 434px) {
     .item-list-container h1 {
-        font-size: 1.5rem;
+        font-size: 90px;
     }
 
     .item-list {
@@ -28,4 +21,5 @@
     .card {
         width: 90%;
     }
+    
 }
