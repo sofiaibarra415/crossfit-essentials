@@ -1,4 +1,4 @@
-import { Button } from '@chakra-ui/react'
+import { Button, Box } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import './ItemCount.css'
 
@@ -14,25 +14,24 @@ const ItemCount = ({initialValue, stock, onAdd}) => {
     }
 
   return (
-    <div className='contenedor'>
-    <button className='button' onClick={decrease}>-</button>
+    <Box mt={-150} ml={450}>
+    <Button color='#fff'  bgColor='#30546E' variant='solid' _hover={{ bg: '#708B9F;', color: '#fff' }} onClick={decrease}>-</Button>
     <span className='count'>{count}</span>
-    <button className='button' onClick={increase}>+</button>
+    <Button color='#fff'  bgColor='#30546E' variant='solid' _hover={{ bg: '#708B9F;', color: '#fff' }}  onClick={increase}>+</Button>
     
     <Button onClick={() => typeof onAdd === 'function' && stock > 0 && onAdd(count)} 
     background='#30546E' 
     color='#fff' 
     _hover={{ bg: '#708B9F;', color: '#fff' }}
     px="24px"
-    py="12px"
+    py="24px"
     fontSize="16px"
     borderRadius="4px"
     alignContent="center"
     ml="60px"
-    mt={-1}
     >
         Agregar al carrito</Button>
-    </div>
+    </Box>
   )
 }
 

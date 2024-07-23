@@ -1,15 +1,3 @@
-.cart-widget {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-}
-
-.cart-icon {
-    font-size: 2rem;
-    color: white;
-}
-
 .cart-count {
     color: #fff;
 }

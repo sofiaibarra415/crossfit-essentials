@@ -1,11 +1,11 @@
 import React from 'react';
-import { Card, CardBody, CardFooter, Stack, Heading, Text, Divider, Button, Image } from '@chakra-ui/react';
+import { Card, CardBody, CardFooter, Stack, Heading, Text, Divider, Button, Image, Box } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import './ItemList.css'; // Asegúrate de importar los estilos
 
 const ItemList = ({ productos }) => {
     return (
-        <div  className="item-list">
+        <Box display={'flex'} flexWrap={'wrap'} gap='20px' justifyContent={'center'}  className="item-list">
             {productos.map((producto) => (
                 <Card key={producto.id} maxW='sm' bg='#CACAAA' margin='5px'>
                     <CardBody>
@@ -32,7 +32,7 @@ const ItemList = ({ productos }) => {
                     </CardFooter>
                 </Card>
             ))}
-        </div>
+        </Box>
     );
 }
 

@@ -7,16 +7,29 @@ import {
     MenuButton,
     MenuList,
     MenuItem,
-    Button
+    Button,
+    Box,
+    Heading
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <nav className="navbar">
-            <h3 className="navbar-brand"><Link to='/'>Crossfit Essentials</Link></h3>
+        <Box as='nav' position="fixed"
+            top="0"
+            left="0"
+            width="100%"
+            height={20}
+            bg="#30546E"
+            zIndex="1000"
+            p="10px 20px"
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)" >
+            <Heading fontSize='30px' color='#fff' fontWeight='bold'><Link to='/'>Crossfit Essentials</Link></Heading>
             <Menu>
-                <MenuButton as={Button} className="menu-button" rightIcon={<FaAngleDown />}>
+                <MenuButton as={Button}  rightIcon={<FaAngleDown />}>
                     Productos
                 </MenuButton>
                 <MenuList>
@@ -27,7 +40,7 @@ const NavBar = () => {
                 </MenuList>
             </Menu>
             <CartWidget />
-        </nav>
+        </Box>
     );
 };
 

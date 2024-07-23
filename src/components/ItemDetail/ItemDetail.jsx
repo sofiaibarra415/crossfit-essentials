@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import { Card, CardBody, CardFooter, Stack, Heading, Text, Divider, Button, ButtonGroup, Image, Flex, Link as ChakraLink, Box } from '@chakra-ui/react'
 import ItemCount from '../ItemCount/ItemCount'
 import { ToastContainer, toast } from 'react-toastify';
-import './ItemDetail.css';
 import Context from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 
@@ -24,7 +23,7 @@ const ItemDetail = ({ nombre, descripcion, img, id, precio, stock }) => {
     const formattedPrice = precio ? precio.toLocaleString('es-ES') : 'N/A';
 
     return (
-        <Card bg='#CACAAA' w={{ base: '90%', md: '70%' }} h='95%' p={4} mt={{ base: 10, md: 5 }} mx='auto'>
+        <Card bg='#CACAAA' w='85%' h='85%' p={4} mt={{ base: 10, md: 5 }} mx='auto'>
             <CardBody>
                 <Flex direction={{ base: 'column', md: 'row' }} align="flex-start">
                     <Image
@@ -38,8 +37,8 @@ const ItemDetail = ({ nombre, descripcion, img, id, precio, stock }) => {
                         p={2}
                     />
                     <Stack ml={{ base: 0, md: 4 }} spacing={4} flex="1" justify="flex-start">
-                        <Heading pt={2} fontSize={{ base: '25px', md: '35px' }}>{nombre}</Heading>
-                        <Text fontSize={{ base: '25px', md: '30px' }}>${formattedPrice}</Text>
+                        <Heading pt={2} color='#30546E' fontSize={{ base: '25px', md: '35px' }}>{nombre}</Heading>
+                        <Text color='#708B9F' fontWeight='bold' fontSize={{ base: '25px', md: '30px' }}>${formattedPrice}</Text>
                         <Text fontSize="20px">Descripcion: {descripcion}</Text>
                     </Stack>
                 </Flex>
@@ -59,8 +58,8 @@ const ItemDetail = ({ nombre, descripcion, img, id, precio, stock }) => {
                                 _hover={{ bg: '#708B9F;', color: '#fff' }}
                                 borderRadius="md"
                                 p={2}
-                                mb={{ base: 2, md: 0 }}
-                                mr={{ base: 0, md: 2 }}
+                                mt={-60}
+                                mr={5}
                                 textAlign="center"
                             >
                                 Ir al carrito
@@ -73,6 +72,7 @@ const ItemDetail = ({ nombre, descripcion, img, id, precio, stock }) => {
                                 _hover={{ bg: '#708B9F;', color: '#fff' }}
                                 borderRadius="md"
                                 p={2}
+                                mt={-60}
                                 textAlign="center"
                             >
                                 Seguir comprando

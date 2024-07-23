@@ -1,11 +1,3 @@
-.item-list-container {
-    padding: 20px;
-    text-align: center;
-    background-color: #fff;
-}
-
-
-
 /* Estilos responsivos */
 @media (max-width: 434px) {
     .item-list-container h1 {

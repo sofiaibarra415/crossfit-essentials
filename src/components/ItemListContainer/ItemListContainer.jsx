@@ -4,7 +4,7 @@ import { getProducts, getProductsByCategory } from '../../data/asyncMock';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import {ClipLoader} from 'react-spinners'
-import { Flex, Heading } from '@chakra-ui/react';
+import { Box, Flex, Heading } from '@chakra-ui/react';
 import { db } from '../../config/firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 
@@ -34,7 +34,7 @@ const ItemListContainer = ({ greeting }) => {
         getData()
     }, [categoryId])
     return (
-        <div className="item-list-container">
+        <Box p='20px' textAlign={'center'} bgColor='#fff' className="item-list-container">
             <Heading color='#30546E' fontSize={25} m={5}>{greeting}</Heading>
             {
                 loading ?
@@ -44,7 +44,7 @@ const ItemListContainer = ({ greeting }) => {
             :
             <ItemList productos= {productos} />
             }
-        </div>
+        </Box>
     )
 }
 export default ItemListContainer
